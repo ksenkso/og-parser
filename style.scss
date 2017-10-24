@@ -230,4 +230,14 @@ h3 {
             color: #90949c;
         }
     }
+
+}
+.hero {
+  min-height: 200px;
+  &__title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+  }
 }

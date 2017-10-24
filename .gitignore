@@ -1,4 +1,6 @@
 # Numerous always-ignore extensions
+*.css
+*.map
 *.diff
 *.err
 *.orig

@@ -215,4 +215,12 @@ h3 {
       font-size: 12px;
       color: #90949c; }
 
+.hero {
+  min-height: 200px; }
+  .hero__title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Arial, sans-serif; }
+
 /*# sourceMappingURL=style.css.map */
