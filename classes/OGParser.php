@@ -31,7 +31,7 @@ class OGParser {
     /**
      * @param string $url
      */
-    public function setURL(string $url): void
+    public function setURL(string $url)
     {
         $this->url = $url;
         $this->baseUrl = trim(parse_url($url, PHP_URL_HOST), '/');
@@ -39,7 +39,7 @@ class OGParser {
     /**
      *
      */
-    public function parse(): void
+    public function parse()
     {
         /**
          * Reset the errors and data arrays to prevent keeping information from previous usages.
@@ -79,6 +79,11 @@ class OGParser {
     public function hasErrors(): bool
     {
         return !!count($this->errors);
+    }
+
+    public function getErrors()
+    {
+        return $this->errors;
     }
     /**
      * Returns the array of data about the given page. The keys of the array are strings.
