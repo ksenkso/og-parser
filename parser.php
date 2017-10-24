@@ -1,9 +1,19 @@
 <?php
-/**
- * @var string $website_url
- */
-$website = file_get_contents($website_url);
+namespace app;
+use app\classes\OGParser;
+require_once 'autoload.php';
 
-// Парсим стандартные данные сайта
-preg_match('/<title>(.*?)<\\/title>/is' , $website , $title); // $title - переменная заголовка
-preg_match('/<meta name="description" content="(.*?)">/is' , $website , $description); // $description - переменная описания страницы
+$website_url = filter_input(INPUT_GET, 'url', FILTER_SANITIZE_URL);
+if (!empty($website_url)) {
+    $parser = new OGParser();
+    $parser->setURL($website_url);
+    $parser->parse();
+    if (!$parser->hasErrors()) {
+        /** @var array $data */
+        $data = $parser->getData();
+        ob_start();
+        include "partials/results.php";
+        echo ob_get_clean();
+    }
+}
+
