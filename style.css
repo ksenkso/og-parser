@@ -1,0 +1,218 @@
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  outline: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /*noinspection CssOverwrittenProperties,CssOverwrittenProperties*/
+  font-size: 100%;
+  /*noinspection CssOverwrittenProperties,CssOverwrittenProperties*/
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  /*noinspection CssOverwrittenProperties,CssOverwrittenProperties*/
+  content: '';
+  /*noinspection CssOverwrittenProperties,CssOverwrittenProperties*/
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* == Pseudo-elements for close blocks == */
+.MainWrapper:after, .MainWrapper .Wrapper:after {
+  content: '';
+  display: block;
+  width: 100%;
+  clear: both; }
+
+body {
+  background: #fafafa; }
+
+.MainWrapper {
+  display: block;
+  width: 100%; }
+  .MainWrapper .Wrapper {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+    @media screen and (min-width: 0px) and (max-width: 424px) {
+      .MainWrapper .Wrapper {
+        width: 100%; } }
+    @media screen and (min-width: 425px) and (max-width: 767px) {
+      .MainWrapper .Wrapper {
+        width: 100%; } }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      .MainWrapper .Wrapper {
+        width: 100%; } }
+    @media screen and (min-width: 1024px) and (max-width: 1199px) {
+      .MainWrapper .Wrapper {
+        width: 960px; } }
+    @media screen and (min-width: 1200px) {
+      .MainWrapper .Wrapper {
+        width: 1200px; } }
+
+.Section {
+  display: block;
+  width: 100%;
+  border: #E5E5E5 solid 1px;
+  padding: 27px 0;
+  background: #FFF; }
+
+.Full {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: stretch;
+  width: 100%;
+  padding: 0 15px 15px; }
+
+.Half {
+  display: block;
+  width: 50%;
+  padding: 15px; }
+
+.Third {
+  display: block;
+  width: 33.3%;
+  padding: 15px; }
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 75px 0 30px; }
+  form input[type=url] {
+    display: block;
+    width: 82%;
+    padding: 14px 7px;
+    border: #CCC solid 1px;
+    font-size: 24px;
+    text-align: center;
+    background: #f7f7f7; }
+  form input[type=submit] {
+    display: block;
+    width: 16%;
+    padding: 14px 21px;
+    border: none;
+    border-bottom: #1976d2 solid 1px;
+    font-size: 24px;
+    text-align: center;
+    color: #FFF;
+    background: #1976d2; }
+
+h3 {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #263238; }
+
+.SearchBlock {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: stretch;
+  width: 100%;
+  margin: 0 0 0;
+  padding: 0 15px 15px; }
+  .SearchBlock__Icon {
+    display: block;
+    width: 24px; }
+    .SearchBlock__Icon img {
+      display: block;
+      width: 100%;
+      height: auto; }
+  .SearchBlock__Informations {
+    display: block;
+    padding-left: 10px; }
+    .SearchBlock__Informations__Title {
+      display: block;
+      width: 100%;
+      font-family: 'Roboto', sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      color: #3f51b5; }
+      .SearchBlock__Informations__Title a {
+        text-decoration: none;
+        color: inherit; }
+    .SearchBlock__Informations__Title:hover {
+      color: #ef5350; }
+    .SearchBlock__Informations__Link {
+      display: block;
+      width: 100%;
+      margin: 4px 0 3px;
+      text-decoration: none;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+      color: #2e7d32; }
+    .SearchBlock__Informations__Description {
+      display: block;
+      width: 100%;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+      color: #808080; }
+
+.SocialBlock {
+  display: block;
+  border: #e8eaed 1px solid;
+  background: #fcfcfc; }
+  .SocialBlock img {
+    display: block;
+    width: 100%;
+    height: auto; }
+  .SocialBlock__Information {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border-top: #e8eaed 1px solid; }
+    .SocialBlock__Information h4 {
+      display: block;
+      margin-bottom: 7px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: #263238; }
+    .SocialBlock__Information p {
+      display: block;
+      width: 100%;
+      margin-bottom: 8px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 13px;
+      color: #263238; }
+    .SocialBlock__Information a {
+      font-family: 'Open Sans', sans-serif;
+      text-decoration: none; }
+    .SocialBlock__Information a.vk {
+      font-size: 13.5px;
+      color: #939393; }
+    .SocialBlock__Information a.facebook {
+      text-transform: uppercase;
+      font-size: 12px;
+      color: #90949c; }
+
+/*# sourceMappingURL=style.css.map */
