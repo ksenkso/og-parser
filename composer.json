@@ -1,0 +1,22 @@
+{
+  "name": "ksenkso/og-parser",
+  "description": "OpenGraph markup parser",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Konstantin Arefyev",
+      "email": "yazunya@gmail.com"
+    },
+    {
+      "name": "Anatoliy Kulikov",
+      "email": "anatoly.andrew.kulikov@yandex.ru"
+    }
+  ],
+  "scripts": {
+    "test": "phpunit"
+  },
+  "require": {
+    "phpunit/phpunit": "6.5.x-dev"
+  }
+}
