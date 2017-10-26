@@ -3,3 +3,4 @@ php:
   - '7.1'
   - hhvm # on Trusty only
   - nightly
+script: phpunit --bootstrap autoload.php test
