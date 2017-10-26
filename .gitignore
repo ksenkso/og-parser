@@ -30,6 +30,10 @@ nbproject
 .sass-cache
 .tmp
 _tmp
+vendor
 logs
 node_modules
 bower_components
+
+# Composer
+composer.phar
