@@ -63,12 +63,12 @@ class OGParser {
         if (!$hasTitle) {
             $this->errors[] = 'В документе нет тега `title`!';
         } else {
-            $this->data['title'] = $title[1];
+            $this->setField('title', $title[1]);
         }
         if (!$hasDescription) {
             $this->errors[] = 'В документе нет мета-тега description!';
         } else {
-            $this->data['description'] = $description[1];
+            $this->setField('description', $description[1]);
         }
     }
     /**
@@ -96,5 +96,15 @@ class OGParser {
         $data['url'] = $this->url;
         $data['baseUrl'] = $this->baseUrl;
         return $data;
+    }
+
+    /**
+     * @param string $name The name of the data field
+     * @param string $value The value of the data field
+     */
+    private function setField($name, $value)
+    {
+        $value = trim(filter_var($value, FILTER_SANITIZE_SPECIAL_CHARS|FILTER_SANITIZE_STRING));
+        $this->data[$name] = $value;
     }
 }
