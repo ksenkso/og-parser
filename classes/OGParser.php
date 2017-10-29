@@ -57,8 +57,9 @@ class OGParser {
          * @var array $title переменная заголовка
          * @var array $description переменная описания страницы
          */
-        $hasTitle = preg_match('/<title>(.*?)<\\/title>/is' , $pageContent, $title);
+        $hasTitle = preg_match('/<meta property="og:title" content="(.*?)">/is' , $pageContent, $title);
         $hasDescription = preg_match('/<meta name="description" content="(.*?)">/is' , $pageContent , $description);
+        $hasImage = preg_match('/<meta property="og:image" content="(.*?)">/is' , $pageContent , $image);
 
         if (!$hasTitle) {
             $this->errors[] = 'В документе нет тега `title`!';
@@ -69,6 +70,13 @@ class OGParser {
             $this->errors[] = 'В документе нет мета-тега description!';
         } else {
             $this->setField('description', $description[1]);
+        }
+
+        if (!$hasImage) {
+            $this->errors[] = 'В документе нет мета-тега og:image!';
+        } else {
+
+            $this->setField('image', $image[1]);
         }
     }
     /**
@@ -81,7 +89,10 @@ class OGParser {
         return !!count($this->errors);
     }
 
-    public function getErrors()
+    /**
+     * @return array
+     */
+    public function getErrors(): array
     {
         return $this->errors;
     }
@@ -104,7 +115,7 @@ class OGParser {
      */
     private function setField($name, $value)
     {
-        $value = trim(filter_var($value, FILTER_SANITIZE_SPECIAL_CHARS|FILTER_SANITIZE_STRING));
+
         $this->data[$name] = $value;
     }
 }
